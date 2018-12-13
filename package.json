@@ -1,0 +1,20 @@
+{
+  "name": "my-os",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd ./packages/OS.js && npm run build",
+    "package:discover": "cd ./packages/OS.js && npm run package:discover",
+    "start:server": "cd ./packages/OS.js && npm run serve",
+    "postinstall": "lerna bootstrap && npm run package:discover && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lerna": "^3.6.0"
+  }
+}
