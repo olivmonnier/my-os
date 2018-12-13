@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd ./packages/OS.js && npm run build",
-    "package:discover": "cd ./packages/OS.js && npm run package:discover",
-    "start:server": "cd ./packages/OS.js && npm run serve",
+    "build": "cd ./packages/os-js && npm run build",
+    "package:discover": "cd ./packages/os-js && npm run package:discover",
+    "start:server": "cd ./packages/os-js && npm run serve",
     "postinstall": "lerna bootstrap && npm run package:discover && npm run build"
   },
   "author": "",

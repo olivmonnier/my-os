@@ -48,6 +48,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "@osjs/ace-application": "^1.2.3",
     "@osjs/calculator-application": "^1.2.1",
     "@osjs/cli": "^3.0.5",
     "@osjs/client": "^3.0.24",
@@ -60,11 +61,15 @@
     "@osjs/htmlviewer-application": "^1.2.0",
     "@osjs/musicplayer-application": "^1.2.2",
     "@osjs/panels": "^3.0.6",
+    "@osjs/pdfreader-application": "^1.1.9",
     "@osjs/preview-application": "^1.1.9",
     "@osjs/server": "^3.0.11",
     "@osjs/settings-application": "^1.0.8",
+    "@osjs/standard-dark-theme": "^4.0.2",
     "@osjs/standard-theme": "^4.0.2",
-    "@osjs/textpad-application": "^1.2.1"
+    "@osjs/textpad-application": "^1.2.1",
+    "@osjs/windows8-theme": "^4.0.2",
+    "@osjs/xterm-application": "^1.1.7"
   },
   "repository": {
     "type": "git",
