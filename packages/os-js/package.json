@@ -8,6 +8,7 @@
     "eslint": "eslint src/client/**/*.js src/server/**/*.js",
     "stylelint": "stylelint src/client/*.scss",
     "serve": "node src/server/index.js",
+    "prod": "cross-env NODE_ENV=\"production\" node src/server/index.js",
     "build:manifest": "osjs-cli package:discover",
     "package:discover": "osjs-cli package:discover",
     "package:create": "osjs-cli package:create",
@@ -69,7 +70,8 @@
     "@osjs/standard-theme": "^4.0.2",
     "@osjs/textpad-application": "^1.2.1",
     "@osjs/windows8-theme": "^4.0.2",
-    "@osjs/xterm-application": "^1.1.7"
+    "@osjs/xterm-application": "^1.1.7",
+    "cross-env": "^5.2.0"
   },
   "repository": {
     "type": "git",
