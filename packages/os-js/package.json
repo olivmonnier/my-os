@@ -72,7 +72,8 @@
     "@osjs/textpad-application": "^1.2.1",
     "@osjs/windows8-theme": "^4.0.2",
     "@osjs/xterm-application": "^1.1.7",
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0"
   },
   "repository": {
     "type": "git",

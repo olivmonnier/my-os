@@ -38,6 +38,7 @@
 // https://manual.os-js.org/v3/resource/official/
 //
 
+require('dotenv').config();
 const {
   Core,
   CoreServiceProvider,
@@ -58,8 +59,8 @@ osjs.register(AuthServiceProvider, {
   args: {
     adapter: dbAuth.adapter,
     config: {
-      url: 'mongodb://localhost:27017',
-      dbName: 'osjs'
+      url: process.env.MONGO_URI,
+      dbName: process.env.MONGO_DB_NAME
     }
   }
 });

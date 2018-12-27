@@ -42,5 +42,29 @@ module.exports = {
   public: path.resolve(root, 'dist'),
   xterm: {
     login: false
+  },
+  vfs: {
+    mountpoints: [{
+      name: 'temp',
+      adapter: 'system', // You can leave this out as 'system' is default
+      attributes: {
+        root: '/tmp'
+      }
+    }, {
+      name: 'osjs',
+      attributes: {
+        root: '{root}/dist',
+        groups: [
+          // Only allow users with the 'admin' group
+          'admin',
+
+          // Or, alternativelly do the same, but only for the 'readdir'
+          // endpoint
+          {
+            readdir: ['admin']
+          }
+        ]
+      }
+    }]
   }
 }

@@ -34,5 +34,13 @@
 //
 
 module.exports = {
-  public: '/'
+  public: '/',
+  vfs: {
+    mountpoints: [{
+      name: 'temp',
+      label: 'Temporary Files',
+      adapter: 'system', // You can leave this out as 'system' is default
+      attributes: {}
+    }]
+  }
 };
