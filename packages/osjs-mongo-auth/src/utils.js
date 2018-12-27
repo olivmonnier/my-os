@@ -52,5 +52,6 @@ const comparePassword = (password, hash) => new Promise((resolve, reject) => {
 module.exports = {
   createConnection,
   createPassword,
-  comparePassword
+  comparePassword,
+  findUser
 }

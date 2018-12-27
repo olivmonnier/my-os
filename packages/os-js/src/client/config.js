@@ -34,10 +34,5 @@
 //
 
 module.exports = {
-  auth: {
-    login: {
-      username: 'demo',
-      password: 'demo'
-    }
-  }
+  public: '/'
 };

@@ -46,6 +46,7 @@ const {
   AuthServiceProvider,
   SettingsServiceProvider
 } = require('@osjs/server');
+const dbAuth = require('@myosjs/osjs-mongo-auth');
 
 const config = require('./config.js');
 const osjs = new Core(config, {});
@@ -53,7 +54,15 @@ const osjs = new Core(config, {});
 osjs.register(CoreServiceProvider, {before: true});
 osjs.register(PackageServiceProvider);
 osjs.register(VFSServiceProvider);
-osjs.register(AuthServiceProvider);
+osjs.register(AuthServiceProvider, {
+  args: {
+    adapter: dbAuth.adapter,
+    config: {
+      url: 'mongodb://localhost:27017',
+      dbName: 'osjs'
+    }
+  }
+});
 osjs.register(SettingsServiceProvider);
 
 process.on('SIGTERM', () => osjs.destroy());

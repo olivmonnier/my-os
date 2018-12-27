@@ -28,6 +28,13 @@
  * @licence Simplified BSD License
  */
 const path = require('path');
+const dbAuth = require('@myosjs/osjs-mongo-auth');
+
+const dbCli = dbAuth.cli({
+  // Change this to match your local database server
+  url: 'mongodb://localhost:27017',
+  dbName: 'osjs'
+});
 
 //
 // This is where you can place your custom CLI tasks
@@ -39,5 +46,5 @@ module.exports = {
   discover: [
     path.resolve(__dirname, '../packages') // OS.js/src/packages
   ],
-  tasks: []
+  tasks: [dbCli]
 };

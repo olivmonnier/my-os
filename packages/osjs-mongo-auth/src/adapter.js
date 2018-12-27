@@ -1,26 +1,18 @@
-const { comparePassword, createConnection } = require('./utils');
+const { comparePassword, findUser } = require('./utils');
 
 module.exports = (core, options = {}) => {
   options = options || {};
-
-  const findUser = async (username) => {
-    const { db, client } = await createConnection(url, dbName);
-    const collection = db.collection('users')
-  
-    return collection.findOne({ username })
-      .then(doc => {
-        client.close();
-        return doc;
-      });
-  }
+  const { url, dbName } = options
 
   return {
     logout: () => Promise.resolve(true),
-    login: () => async (req, res) => {
+    login: async (req, res) => {
       const { username, password } = req.body;
-      const user = await findUser(username);
+      const user = await findUser(url, dbName)(username);
+
       
       if (user) {
+        user['id'] = user._id;
         return comparePassword(password, user.password)
           .then(result => result ? user : false);
       } else return false;
