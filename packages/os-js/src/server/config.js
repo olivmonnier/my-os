@@ -33,6 +33,7 @@
 // https://manual.os-js.org/v3/config/#client
 //
 
+require('dotenv').config();
 const path = require('path');
 const root = path.resolve(__dirname, '../../');
 
@@ -65,6 +66,19 @@ module.exports = {
           }
         ]
       }
-    }]
+    }, {
+      name: 'nas',
+      label: 'NAS',
+      adapter: 'webdav',
+      attributes: {
+        connection: {
+          uri: process.env.WEBDAV_URI,
+          username: process.env.WEBDAV_USERNAME,
+          password: process.env.WEBDAV_PWD,
+          access_token: null,
+          prefix: '/home'
+        }
+      }
+     }]
   }
 }

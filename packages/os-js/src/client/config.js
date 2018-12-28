@@ -41,6 +41,9 @@ module.exports = {
       label: 'Temporary Files',
       adapter: 'system', // You can leave this out as 'system' is default
       attributes: {}
-    }]
+    }, {
+      name: 'nas',
+      label: 'NAS'
+     }]
   }
 };

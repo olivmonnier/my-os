@@ -70,6 +70,7 @@
     "@osjs/standard-dark-theme": "^4.0.2",
     "@osjs/standard-theme": "^4.0.2",
     "@osjs/textpad-application": "^1.2.1",
+    "@osjs/webdav-adapter": "git+https://github.com/os-js/osjs-webdav-adapter.git",
     "@osjs/windows8-theme": "^4.0.2",
     "@osjs/xterm-application": "^1.1.8",
     "cross-env": "^5.2.0",

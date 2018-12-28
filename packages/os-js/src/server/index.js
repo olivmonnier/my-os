@@ -48,13 +48,20 @@ const {
   SettingsServiceProvider
 } = require('@osjs/server');
 const dbAuth = require('@myosjs/osjs-mongo-auth');
+const webdavAdapter = require('@osjs/webdav-adapter');
 
 const config = require('./config.js');
 const osjs = new Core(config, {});
 
 osjs.register(CoreServiceProvider, {before: true});
 osjs.register(PackageServiceProvider);
-osjs.register(VFSServiceProvider);
+osjs.register(VFSServiceProvider, {
+  args: {
+    adapters: {
+      webdav: webdavAdapter
+    }
+  }
+});
 osjs.register(AuthServiceProvider, {
   args: {
     adapter: dbAuth.adapter,
