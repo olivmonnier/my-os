@@ -1,0 +1,15 @@
+{
+  "name": "CodeSandboxApplication",
+  "category": "development",
+  "title": {
+    "en_EN": "CodeSandbox",
+    "fr_FR": "CodeSandbox"
+  },
+  "description": {
+    "en_EN": "CodeSandbox Application",
+    "fr_FR": "CodeSandbox Application"
+  },
+  "files": [
+    "main.js"
+  ]
+}
