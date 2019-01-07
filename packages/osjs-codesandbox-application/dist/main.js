@@ -90,9 +90,13 @@
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _metadata_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./metadata.json */ "./metadata.json");
+var _metadata_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./metadata.json */ "./metadata.json", 1);
 /*
  * OS.js - JavaScript Cloud/Web Desktop Platform
  *
@@ -122,6 +126,8 @@
  * @author  Anders Evenrud <andersevenrud@gmail.com>
  * @licence Simplified BSD License
  */
+
+
 var createIframe = function createIframe(win) {
   var iframe = document.createElement('iframe');
   iframe.style.width = '100%';
@@ -138,11 +144,9 @@ var createIframe = function createIframe(win) {
     });
   });
   return iframe;
-}; // Creates the internal callback function when OS.js launches an application
-// Note the first argument is the 'name' taken from your metadata.json file
+};
 
-
-OSjs.make('osjs/packages').register('CodeSandboxApplication', function (core, args, options, metadata) {
+var createProcess = function createProcess(core, args, options, metadata) {
   // Create a new Application instance
   var proc = core.make('osjs/application', {
     args: args,
@@ -151,15 +155,11 @@ OSjs.make('osjs/packages').register('CodeSandboxApplication', function (core, ar
   }); // Create  a new Window instance
 
   proc.createWindow({
-    id: 'CodeSandboxApplicationWindow',
+    id: 'CodeSandboxWindow',
     title: metadata.title.en_EN,
     dimension: {
       width: 400,
       height: 400
-    },
-    position: {
-      left: 700,
-      top: 200
     }
   }).on('destroy', function () {
     return proc.destroy();
@@ -172,7 +172,21 @@ OSjs.make('osjs/packages').register('CodeSandboxApplication', function (core, ar
     $content.appendChild(iframe);
   });
   return proc;
-});
+}; // Note the first argument is the 'name' taken from your metadata.json file
+
+
+OSjs.make('osjs/packages').register(_metadata_json__WEBPACK_IMPORTED_MODULE_0__["name"], createProcess);
+
+/***/ }),
+
+/***/ "./metadata.json":
+/*!***********************!*\
+  !*** ./metadata.json ***!
+  \***********************/
+/*! exports provided: name, category, title, description, files, default */
+/***/ (function(module) {
+
+module.exports = {"name":"CodeSandbox","category":"development","title":{"en_EN":"CodeSandbox","fr_FR":"CodeSandbox"},"description":{"en_EN":"CodeSandbox Application","fr_FR":"CodeSandbox Application"},"files":["main.js"]};
 
 /***/ }),
 

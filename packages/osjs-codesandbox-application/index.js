@@ -28,6 +28,8 @@
  * @licence Simplified BSD License
  */
 
+import {name as applicationName} from './metadata.json';
+
 const createIframe = (win) => {
   const iframe = document.createElement('iframe');
   iframe.style.width = '100%';
@@ -45,10 +47,7 @@ const createIframe = (win) => {
   return iframe;
 };
 
-// Creates the internal callback function when OS.js launches an application
-// Note the first argument is the 'name' taken from your metadata.json file
-OSjs.make('osjs/packages').register('CodeSandboxApplication', (core, args, options, metadata) => {
-
+const createProcess = (core, args, options, metadata) => {
   // Create a new Application instance
   const proc = core.make('osjs/application', {
     args,
@@ -58,10 +57,9 @@ OSjs.make('osjs/packages').register('CodeSandboxApplication', (core, args, optio
 
   // Create  a new Window instance
   proc.createWindow({
-    id: 'CodeSandboxApplicationWindow',
+    id: 'CodeSandboxWindow',
     title: metadata.title.en_EN,
-    dimension: {width: 400, height: 400},
-    position: {left: 700, top: 200}
+    dimension: {width: 400, height: 400}
   })
     .on('destroy', () => proc.destroy())
     .render(($content, win) => {
@@ -76,4 +74,7 @@ OSjs.make('osjs/packages').register('CodeSandboxApplication', (core, args, optio
     });
 
   return proc;
-});
+}
+
+// Note the first argument is the 'name' taken from your metadata.json file
+OSjs.make('osjs/packages').register(applicationName, createProcess);
