@@ -3,6 +3,6 @@
 node_modules
 /packages.json
 /sessions
-/.env*
+/.env
 /session-store.db
 dist
