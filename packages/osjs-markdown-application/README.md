@@ -9,15 +9,14 @@
 [![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=andersevenrud%40gmail%2ecom&lc=NO&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 [![Support](https://img.shields.io/badge/patreon-support-orange.svg)](https://www.patreon.com/user?u=2978551&ty=h&u=2978551)
 
-# OS.js v3 Writer Application
+# OS.js v3 Markdown Application
 
-This is the Writer Application for OS.js v3
+This is the Markdown Application for OS.js v3
 
-![Screenshot](https://raw.githubusercontent.com/os-js/osjs-writer-application/master/screenshot.png)
 
 ## Installation
 
 ```bash
-npm install --save --production @osjs/writer-application
+npm install --save --production @myosjs/osjs-markdown-application
 npm run package:discover
 ```
