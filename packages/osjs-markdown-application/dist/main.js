@@ -104,9 +104,9 @@ __webpack_require__.r(__webpack_exports__);
 var _metadata_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./metadata.json */ "./metadata.json", 1);
 /* harmony import */ var _osjs_gui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @osjs/gui */ "./node_modules/@osjs/gui/dist/esm.js");
 /*!
- * OS.js - JavaScript Cloud/Web Desktop Platform
+ * osjs-markdown-application
  *
- * Copyright (c) 2011-2019, Anders Evenrud <andersevenrud@gmail.com>
+ * Copyright (c) 2011-2019, Olivier Monnier <omonnier.dev@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -129,7 +129,7 @@ var _metadata_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpa
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * @author  Anders Evenrud <andersevenrud@gmail.com>
+ * @author  Olivier Monnier <omonnier.dev@gmail.com>
  * @licence Simplified BSD License
  */
 // TODO: More options
@@ -322,7 +322,7 @@ var createMainWindow = function createMainWindow(core, proc) {
     id: 'MarkdownWindow',
     icon: proc.resource(proc.metadata.icon),
     dimension: {
-      width: 600,
+      width: 800,
       height: 700
     }
   }).on('destroy', function () {

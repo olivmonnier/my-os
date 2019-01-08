@@ -1,7 +1,7 @@
 /*!
- * OS.js - JavaScript Cloud/Web Desktop Platform
+ * osjs-markdown-application
  *
- * Copyright (c) 2011-2019, Anders Evenrud <andersevenrud@gmail.com>
+ * Copyright (c) 2011-2019, Olivier Monnier <omonnier.dev@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * @author  Anders Evenrud <andersevenrud@gmail.com>
+ * @author  Olivier Monnier <omonnier.dev@gmail.com>
  * @licence Simplified BSD License
  */
 
@@ -183,7 +183,7 @@ const createMainWindow = (core, proc) => {
   proc.createWindow({
     id: 'MarkdownWindow',
     icon: proc.resource(proc.metadata.icon),
-    dimension: {width: 600, height: 700}
+    dimension: {width: 800, height: 700}
   })
     .on('destroy', () => proc.destroy())
     .on('render', (win) => win.focus())

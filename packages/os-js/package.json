@@ -75,6 +75,7 @@
     "@osjs/textpad-application": "^1.2.3",
     "@osjs/webdav-adapter": "git+https://github.com/olivmonnier/osjs-webdav-adapter.git",
     "@osjs/windows8-theme": "^4.0.2",
+    "@osjs/writer-application": "^0.1.0",
     "@osjs/xterm-application": "^1.1.9",
     "cross-env": "^5.2.0",
     "dotenv": "^6.2.0"
