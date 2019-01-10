@@ -66,8 +66,8 @@ osjs.register(AuthServiceProvider, {
   args: {
     adapter: dbAuth.adapter,
     config: {
-      url: process.env.MONGO_URI,
-      dbName: process.env.MONGO_DB_NAME
+      url: process.env.MONGODB_URI,
+      dbName: process.env.MONGODB_DB_NAME
     }
   }
 });

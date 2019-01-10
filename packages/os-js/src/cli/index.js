@@ -33,8 +33,8 @@ const dbAuth = require('@myosjs/osjs-mongo-auth');
 
 const dbCli = dbAuth.cli({
   // Change this to match your local database server
-  url: process.env.MONGO_URI,
-  dbName: process.env.MONGO_DB_NAME
+  url: process.env.MONGODB_URI,
+  dbName: process.env.MONGODB_DB_NAME
 });
 
 //

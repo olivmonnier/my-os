@@ -6,8 +6,8 @@ module.exports.up = function (next) {
   const { addUser } = service;
 
   addUser(
-    process.env.MONGO_URI, 
-    process.env.MONGO_DB_NAME
+    process.env.MONGODB_URI, 
+    process.env.MONGODB_DB_NAME
   )('admin', 'admin')
     .then(next);
 }
