@@ -30,9 +30,6 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
-    "@myosjs/osjs-codesandbox-application": "1.1.0",
-    "@myosjs/osjs-markdown-application": "0.1.0",
-    "@myosjs/osjs-mongo-auth": "1.0.0",
     "babel-loader": "^8.0.4",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.1",
@@ -52,6 +49,9 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "@myosjs/osjs-codesandbox-application": "1.1.0",
+    "@myosjs/osjs-markdown-application": "0.1.0",
+    "@myosjs/osjs-mongo-auth": "1.0.0",
     "@osjs/ace-application": "^1.2.5",
     "@osjs/calculator-application": "^1.2.3",
     "@osjs/cli": "^3.0.7",

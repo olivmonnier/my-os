@@ -7,9 +7,9 @@
     "build": "cd ./packages/os-js && npm run build",
     "db:migrate": "cd ./packages/db-migrate && npm start",
     "package:discover": "cd ./packages/os-js && npm run package:discover",
-    "start:server": "cd ./packages/os-js && npm run serve",
+    "start:dev": "cd ./packages/os-js && npm run serve",
+    "start:prod": "cd ./packages/os-js && npm run prod",
     "postinstall": "lerna bootstrap && npm run package:discover && npm run build && npm run db:migrate",
-    "start": "npm run start:server"
   },
   "author": "",
   "license": "ISC",
