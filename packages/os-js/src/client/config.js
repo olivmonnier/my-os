@@ -34,6 +34,7 @@
 //
 
 module.exports = {
+  public: '/',
   vfs: {
     mountpoints: [
       // {

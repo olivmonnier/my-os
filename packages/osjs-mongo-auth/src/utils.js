@@ -42,7 +42,7 @@ const promptPassword = q => new Promise((resolve, reject) => {
   rl._writeToOutput = s => rl.output.write('*');
 });
 
-const createPassword = () => promptPassword('Password: ')
+const createPasswordPrompt = () => promptPassword('Password: ')
   .then(pwd => encryptPassword(pwd));
 
 const comparePassword = (password, hash) => new Promise((resolve, reject) => {
@@ -51,7 +51,8 @@ const comparePassword = (password, hash) => new Promise((resolve, reject) => {
 
 module.exports = {
   createConnection,
-  createPassword,
+  createPasswordPrompt,
   comparePassword,
+  encryptPassword,
   findUser
 }

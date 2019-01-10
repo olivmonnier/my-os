@@ -27,13 +27,14 @@
  * @author  Anders Evenrud <andersevenrud@gmail.com>
  * @licence Simplified BSD License
  */
+require('dotenv').config();
 const path = require('path');
 const dbAuth = require('@myosjs/osjs-mongo-auth');
 
 const dbCli = dbAuth.cli({
   // Change this to match your local database server
-  url: 'mongodb://localhost:27017',
-  dbName: 'osjs'
+  url: process.env.MONGO_URI,
+  dbName: process.env.MONGO_DB_NAME
 });
 
 //

@@ -1,4 +1,5 @@
-const cli = require('./src/cli.js');
-const adapter = require('./src/adapter.js');
+const cli = require('./src/cli');
+const adapter = require('./src/adapter');
+const service = require('./src/service');
 
-module.exports = {adapter, cli};
+module.exports = {adapter, cli, service};

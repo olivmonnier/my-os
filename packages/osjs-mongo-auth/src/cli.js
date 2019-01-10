@@ -1,4 +1,4 @@
-const { createConnection, createPassword, findUser } = require('./utils');
+const { createConnection, createPasswordPrompt, findUser } = require('./utils');
 
 module.exports = (cfg = {}) => cli => {
   const { url, dbName } = cfg;
@@ -36,7 +36,7 @@ module.exports = (cfg = {}) => cli => {
     const { db, client } = await createConnection(url, dbName);
     const collection = db.collection('users');
 
-    return createPassword()
+    return createPasswordPrompt()
       .then(password => {
         const newDoc = {
           groups: args.groups || 'admin',
@@ -65,7 +65,7 @@ module.exports = (cfg = {}) => cli => {
     const { db, client } = await createConnection(url, dbName);
     const collection = db.collection('users');
 
-    return createPassword()
+    return createPasswordPrompt()
       .then(password => 
         collection.updateOne({ username: args }, { $set: { password } })
       )
