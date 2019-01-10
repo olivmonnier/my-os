@@ -45,40 +45,28 @@ module.exports = {
     login: false
   },
   vfs: {
-    mountpoints: [{
-      name: 'temp',
-      adapter: 'system', // You can leave this out as 'system' is default
-      attributes: {
-        root: '/tmp'
-      }
-    }, {
-      name: 'osjs',
-      attributes: {
-        root: '{root}/dist',
-        groups: [
-          // Only allow users with the 'admin' group
-          'admin',
-
-          // Or, alternativelly do the same, but only for the 'readdir'
-          // endpoint
-          {
-            readdir: ['admin']
+    mountpoints: [
+      // {
+      //   name: 'temp',
+      //   adapter: 'system', // You can leave this out as 'system' is default
+      //   attributes: {
+      //     root: '/tmp'
+      //   }
+      // },   
+      {
+        name: 'nas',
+        label: 'NAS',
+        adapter: 'webdav',
+        attributes: {
+          connection: {
+            uri: process.env.WEBDAV_URI,
+            username: process.env.WEBDAV_USERNAME,
+            password: process.env.WEBDAV_PWD,
+            access_token: null,
+            prefix: process.env.WEBDAV_FOLDER
           }
-        ]
-      }
-    }, {
-      name: 'nas',
-      label: 'NAS',
-      adapter: 'webdav',
-      attributes: {
-        connection: {
-          uri: process.env.WEBDAV_URI,
-          username: process.env.WEBDAV_USERNAME,
-          password: process.env.WEBDAV_PWD,
-          access_token: null,
-          prefix: '/home'
         }
       }
-     }]
+    ]
   }
 }

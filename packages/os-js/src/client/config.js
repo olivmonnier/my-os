@@ -34,16 +34,18 @@
 //
 
 module.exports = {
-  public: '/',
   vfs: {
-    mountpoints: [{
-      name: 'temp',
-      label: 'Temporary Files',
-      adapter: 'system', // You can leave this out as 'system' is default
-      attributes: {}
-    }, {
-      name: 'nas',
-      label: 'NAS'
-     }]
+    mountpoints: [
+      // {
+      //   name: 'temp',
+      //   label: 'Temporary Files',
+      //   adapter: 'system', // You can leave this out as 'system' is default
+      //   attributes: {}
+      // }, 
+      {
+        name: 'nas',
+        label: 'NAS'
+      }
+    ]
   }
 };
