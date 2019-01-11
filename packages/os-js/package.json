@@ -1,6 +1,6 @@
 {
   "name": "@osjs/osjs",
-  "version": "3.0.0-beta.7",
+  "version": "3.0.0-beta.8",
   "description": "OS.js v3",
   "main": "index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "stylelint-scss": "^3.4.1",
     "typeface-roboto": "0.0.54",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {
     "@myosjs/osjs-codesandbox-application": "1.1.0",
@@ -54,8 +54,8 @@
     "@myosjs/osjs-mongo-auth": "1.0.0",
     "@osjs/ace-application": "^1.2.5",
     "@osjs/calculator-application": "^1.2.3",
-    "@osjs/cli": "^3.0.7",
-    "@osjs/client": "^3.0.34",
+    "@osjs/cli": "^3.0.8",
+    "@osjs/client": "^3.0.36",
     "@osjs/dialogs": "^3.0.5",
     "@osjs/draw-application": "^1.2.2",
     "@osjs/epub-application": "1.0.8",
@@ -67,12 +67,12 @@
     "@osjs/musicplayer-application": "^1.2.4",
     "@osjs/panels": "^3.0.9",
     "@osjs/pdfreader-application": "^1.1.11",
-    "@osjs/preview-application": "^1.1.11",
+    "@osjs/preview-application": "^1.1.13",
     "@osjs/server": "^3.0.18",
     "@osjs/settings-application": "^1.1.1",
     "@osjs/standard-dark-theme": "^4.0.6",
     "@osjs/standard-theme": "^4.0.3",
-    "@osjs/textpad-application": "^1.2.3",
+    "@osjs/textpad-application": "^1.2.4",
     "@osjs/webdav-adapter": "git+https://github.com/olivmonnier/osjs-webdav-adapter.git",
     "@osjs/windows8-theme": "^4.0.2",
     "@osjs/writer-application": "^0.1.0",
