@@ -40,6 +40,7 @@ import {
   Menubar,
   MenubarItem,
   TextareaField,
+  Panes,
   Iframe
 } from '@osjs/gui';
 
@@ -118,18 +119,12 @@ const createApplication = (core, proc, win, $content) => {
           onclick: ev => actions.menu(ev)
         }, _('LBL_FILE'))
       ]),
-      h(BoxContainer, {
-        grow: 1,
-        shrink: 1,
-        orientation: 'vertical'
-      }, [
+      h(Panes, {style: {flex: '1 1'}}, [
         h(TextareaField, {
-          box: {grow: 1},
           value: state.text,
           oninput: (ev, value) => actions.setText(value)          
         }),
         h(RichText, {
-          box: {grow: 2},
           value: decode(state.text),
           oncreate: el => proc.emit('richtext:inited', el, state.text)
         })

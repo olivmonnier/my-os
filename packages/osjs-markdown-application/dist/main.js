@@ -220,22 +220,16 @@ var createApplication = function createApplication(core, proc, win, $content) {
       onclick: function onclick(ev) {
         return actions.menu(ev);
       }
-    }, _('LBL_FILE'))]), Object(hyperapp__WEBPACK_IMPORTED_MODULE_1__["h"])(_osjs_gui__WEBPACK_IMPORTED_MODULE_4__["BoxContainer"], {
-      grow: 1,
-      shrink: 1,
-      orientation: 'vertical'
+    }, _('LBL_FILE'))]), Object(hyperapp__WEBPACK_IMPORTED_MODULE_1__["h"])(_osjs_gui__WEBPACK_IMPORTED_MODULE_4__["Panes"], {
+      style: {
+        flex: '1 1'
+      }
     }, [Object(hyperapp__WEBPACK_IMPORTED_MODULE_1__["h"])(_osjs_gui__WEBPACK_IMPORTED_MODULE_4__["TextareaField"], {
-      box: {
-        grow: 1
-      },
       value: state.text,
       oninput: function oninput(ev, value) {
         return actions.setText(value);
       }
     }), Object(hyperapp__WEBPACK_IMPORTED_MODULE_1__["h"])(RichText, {
-      box: {
-        grow: 2
-      },
       value: decode(state.text),
       oncreate: function oncreate(el) {
         return proc.emit('richtext:inited', el, state.text);
