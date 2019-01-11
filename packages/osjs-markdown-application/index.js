@@ -36,7 +36,6 @@ import marked from 'marked';
 import {name as applicationName} from './metadata.json';
 import {
   Box,
-  BoxContainer,
   Menubar,
   MenubarItem,
   TextareaField,
@@ -84,9 +83,7 @@ const template = (proc, s) => `
  */
 const RichText = (props) => h(Iframe, Object.assign({
   box: {
-    margin: false,
-    grow: 1,
-    shrink: 1,
+    margin: false
   }
 }, props));
 

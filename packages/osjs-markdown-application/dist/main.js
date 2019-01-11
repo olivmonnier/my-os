@@ -162,9 +162,7 @@ var template = function template(proc, s) {
 var RichText = function RichText(props) {
   return Object(hyperapp__WEBPACK_IMPORTED_MODULE_1__["h"])(_osjs_gui__WEBPACK_IMPORTED_MODULE_4__["Iframe"], Object.assign({
     box: {
-      margin: false,
-      grow: 1,
-      shrink: 1
+      margin: false
     }
   }, props));
 };
