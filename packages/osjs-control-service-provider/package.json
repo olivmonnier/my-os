@@ -1,0 +1,27 @@
+{
+  "name": "@myosjs/osjs-control-service-provider",
+  "version": "1.0.0",
+  "description": "OS.js v3 Example Service Provider",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/os-js/osjs-example-provider.git"
+  },
+  "keywords": [
+    "osjs"
+  ],
+  "dependencies": {
+    "robotjs": "^0.5.1"
+  },
+  "author": "Olivier Monnier <omonnier.dev@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/os-js/osjs-example-provider/issues"
+  },
+  "homepage": "https://github.com/os-js/osjs-example-provider#readme",
+  "osjs": {
+    "type": "provider"
+  }
+}

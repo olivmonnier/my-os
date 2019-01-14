@@ -47,6 +47,7 @@ const {
   AuthServiceProvider,
   SettingsServiceProvider
 } = require('@osjs/server');
+const ControlServiceProvider = require('@myosjs/osjs-control-service-provider');
 const dbAuth = require('@myosjs/osjs-mongo-auth');
 const webdavAdapter = require('@osjs/webdav-adapter');
 
@@ -72,6 +73,7 @@ osjs.register(AuthServiceProvider, {
   }
 });
 osjs.register(SettingsServiceProvider);
+osjs.register(ControlServiceProvider);
 
 process.on('SIGTERM', () => osjs.destroy());
 process.on('SIGINT', () => osjs.destroy());
