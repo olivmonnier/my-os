@@ -13,7 +13,6 @@
     "osjs"
   ],
   "dependencies": {
-    "robotjs": "^0.5.1"
   },
   "author": "Olivier Monnier <omonnier.dev@gmail.com>",
   "license": "BSD-2-Clause",
