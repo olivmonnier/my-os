@@ -10,7 +10,7 @@
     "start:dev": "cd ./packages/os-js && npm run package:discover && npm run build && npm run serve",
     "start:prod": "cd ./packages/os-js && npm run prod",
     "postinstall": "lerna bootstrap && npm run db:migrate",
-    "heroku-postbuild": "npm run package:discover && npm run build"
+    "heroku-postbuild": "npm run build && npm run package:discover -- --copy"
   },
   "author": "",
   "license": "ISC",
