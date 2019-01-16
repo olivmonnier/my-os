@@ -52,7 +52,6 @@
     "@myosjs/osjs-codesandbox-application": "1.1.0",
     "@myosjs/osjs-markdown-application": "0.1.0",
     "@myosjs/osjs-mongo-auth": "1.0.0",
-    "@myosjs/osjs-control-service-provider": "1.0.0",
     "@osjs/ace-application": "^1.2.5",
     "@osjs/calculator-application": "^1.2.3",
     "@osjs/cli": "^3.0.8",
